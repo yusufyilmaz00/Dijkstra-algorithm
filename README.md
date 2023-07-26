@@ -10,7 +10,12 @@ In this implementation, we have used a simple example problem of finding the sho
 
 # Functions and Input Formats
  - First enter the number of nodes and then enter names of nodes.
- - 
+ - **getEdgeAndCost()**
+    - use number instead of names for nodes
+    - After entering of all nodes enter '0' to finish the loop
+    - Enter the connected node couples at once. This means input= {A, B, cost} and input= {B, A, cost} is same thing.
+    - ![node_numbers](https://i.hizliresim.com/bjo1374.png)
+    
  
 ## Simple Example
 Below is an example of Dijkstra's algorithm.
