@@ -3,7 +3,7 @@
 #define LENGTH 50
 #define INFINITE 999999
 
-void getParentAndCost(char nodes[][LENGTH],int costs[][MAX],int count);
+void getEdgeAndCost(char nodes[][LENGTH],int costs[][MAX],int count);
 void findPath(char nodes[][LENGTH],int costs[][MAX],int count);
 void printPath(char nodes[][LENGTH],int valueParent[][3],int startIndex);
 void showTable(char nodes[][LENGTH],int valueParent[][3],int count);
@@ -22,13 +22,13 @@ int main(){
         scanf(" %s",&nodes[i]);
     }
     
-    getParentAndCost(nodes,costs,nodeCount);
+    getEdgeAndCost(nodes,costs,nodeCount);
     findPath(nodes,costs,nodeCount);
 
     return 1;
 }
 
-void getParentAndCost(char nodes[][LENGTH],int costs[][MAX],int count){
+void getEdgeAndCost(char nodes[][LENGTH],int costs[][MAX],int count){
     int i,j,cost,n1,n2,flag=1;
 
     printf("Use node indexs instead of node names:\n");
