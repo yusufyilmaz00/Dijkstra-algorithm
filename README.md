@@ -1,2 +1,4 @@
 # Dijkstra-algorithm
-Dijkstra's algorithm | C
+![image](https://i.stechies.com/1200x756/userfiles/images/Dijkstras-algorithm.jpg)
+Dijkstra's algorithm solution on C
+
