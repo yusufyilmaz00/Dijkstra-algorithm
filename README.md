@@ -1,18 +1,21 @@
-# Dijkstra-algorithm
+# Dijkstra's Algorithm Implementation in C
 ![image](https://i.stechies.com/1200x756/userfiles/images/Dijkstras-algorithm.jpg)
-Dijkstra's algorithm solution on C
+This repository contains a C implementation of Dijkstra's algorithm, a popular algorithm used to find the shortest path between nodes in a weighted graph.
+
+## Introduction
+Dijkstra's algorithm is a greedy algorithm that finds the shortest path from a source node to all other nodes in a weighted graph. It guarantees the shortest path for non-negative edge weights, making it suitable for various applications such as network routing and GPS navigation systems.
+
+## Problem Statement
+In this implementation, we have used a simple example problem of finding the shortest path between nodes in a city's road network. Each road connecting two nodes has an associated positive weight representing the distance between the two points. Given a starting and finishing node, the algorithm finds the shortest path to the finishing node in the graph.
+# Functions and Input Formats
+
 ## Simple Example
 Below is an example of Dijkstra's algorithm.
 ![image](https://i.hizliresim.com/6wcm9wr.png)
 
 ## Contributing
-
 If you find any issues with the code or have suggestions for improvement, feel free to open an issue or submit a pull request. Your contributions are welcome!
 
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
 # Acknowledgments
+Special thanks to [Salih Can Tekin](https://github.com/salihcantekin) [(@TechBuddyTR)](https://www.youtube.com/@TechBuddyTR) on YouTube for the informative [Dijkstra's algorithm tutorial](https://www.youtube.com/watch?v=MeiKA0uai0c) that inspired this implementation.
 
-Special thanks to @TechBuddy on YouTube for the informative Dijkstra's algorithm tutorial that inspired this implementation.
