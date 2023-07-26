@@ -7,8 +7,11 @@ Dijkstra's algorithm is a greedy algorithm that finds the shortest path from a s
 
 ## Problem Statement
 In this implementation, we have used a simple example problem of finding the shortest path between nodes in a city's road network. Each road connecting two nodes has an associated positive weight representing the distance between the two points. Given a starting and finishing node, the algorithm finds the shortest path to the finishing node in the graph.
-# Functions and Input Formats
 
+# Functions and Input Formats
+ - First enter the number of nodes and then enter names of nodes.
+ - 
+ 
 ## Simple Example
 Below is an example of Dijkstra's algorithm.
 ![image](https://i.hizliresim.com/6wcm9wr.png)
