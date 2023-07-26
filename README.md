@@ -15,8 +15,23 @@ In this implementation, we have used a simple example problem of finding the sho
     - After entering of all nodes enter '0' to finish the loop
     - Enter the connected node couples at once. This means input= {A, B, cost} and input= {B, A, cost} is same thing.
     - ![node_numbers](https://i.hizliresim.com/bjo1374.png)
-    
- 
+- **findPath()**
+    - initialize integer matrix called **_valueParent[][3]_**
+        - valueParent[node_index][0] = total path value
+        - valueParent[node_index][1] = node Parent
+        - valueParent[node_index][2] = exploration status (is node explored? 0: False 1: True)
+    - fill with this numbers for each node
+        - **_INFINITE_**: The large or infinite number we defined at the beginning of the source code (defined as 999.999 at this file)
+        - **_-1_**: flag for the starting node and we use this value on the printPath() function after the process is finished. After the finding path process, each cell filled with Parent_id except the starting node.
+        - **_0_**: Each cell filled with 0 for exploration_status: False. 
+        ```
+        valueParent[i][0]= INFINITE;
+        valueParent[i][1]= -1;
+        valueParent[i][2]= 0;
+        ```
+    - Process:
+        - determine minimum value (at first iteration this is starting node) and node index
+
 ## Simple Example
 Below is an example of Dijkstra's algorithm.
 ![image](https://i.hizliresim.com/6wcm9wr.png)
