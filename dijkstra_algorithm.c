@@ -31,18 +31,18 @@ int main(){
 void getEdgeAndCost(char nodes[][LENGTH],int costs[][MAX],int count){
     int i,j,cost,n1,n2,flag=1;
 
-    printf("Use node indexs instead of node names:\n");
+    printf("Use node numbers instead of node names:\n");
     for(i=0;i<count;i++){
         printf("\t%s [%d]\n",nodes[i],i+1);
     }
     printf("\nenter the node couples one time like only (A,B) or only (B,A)\nEnter node '0' for exit\n\n");
 
     while(n1 != 0 || n2 != 0 ){
-        printf("Enter a number of first node:");
+        printf("Enter a number of first node :");
         scanf("%d",&n1);
-        printf("Enter a number of second node:");
+        printf("Enter a number of second node :");
         scanf("%d",&n2);
-        printf("Enter a cost:");
+        printf("Enter a cost :");
         scanf("%d",&cost);
         costs[n1-1][n2-1] = cost;
         costs[n2-1][n1-1] = cost;
