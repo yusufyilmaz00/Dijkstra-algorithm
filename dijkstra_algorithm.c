@@ -48,7 +48,7 @@ void getParentAndCost(char nodes[][LENGTH],int costs[][MAX],int count){
         costs[n2-1][n1-1] = cost;
     }
     
-    // print connected node & cost table
+    // print connected nodes & cost table
     
     printf("\n      ");
     for(i=0;i<count;i++)
@@ -102,7 +102,7 @@ void findPath(char nodes[][LENGTH],int costs[][MAX],int count){
         printf("-----------------\nScanning for [%s]\n-----------------\n",nodes[index]);
 
         for(j=0;j<count;j++){
-            // if node have connection with other nodes cost has to be different from zero
+            //If node has a connection with other nodes cost has to be different from zero
             if(costs[index][j] != 0){
                 printf("\t\t-> [%s]\n",nodes[j]);
                 newCost = valueParent[index][0] + costs[index][j];
@@ -125,7 +125,7 @@ void findPath(char nodes[][LENGTH],int costs[][MAX],int count){
         showTable(nodes,valueParent,count);
     }
 
-    // We use (stop-1) because finishing node number is "3" but it's index "2"
+    // We use (stop-1) because the finishing node number is "3" but its index "2"
     printPath(nodes,valueParent,stop-1);
 }
 
