@@ -21,20 +21,56 @@ In this implementation, we have used a simple example problem of finding the sho
         - valueParent[node_index][1] = node Parent
         - valueParent[node_index][2] = exploration status (is node explored? 0: False 1: True)
     - fill with this numbers for each node
-        - **_INFINITE_**: The large or infinite number we defined at the beginning of the source code (defined as 999.999 at this file)
-        - **_-1_**: flag for the starting node and we use this value on the printPath() function after the process is finished. After the finding path process, each cell filled with Parent_id except the starting node.
-        - **_0_**: Each cell filled with 0 for exploration_status: False. 
+        - **_INFINITE_** : The large or infinite number that we defined at the beginning of the source code (defined as 999.999 at this file)
+        - **_-1_** : flag for the starting node and we use this value on the printPath() function after the process is finished. After the finding path process, each cell filled with Parent_id except the starting node.
+        - **_0_** : Each cell filled with 0 for exploration_status: False. 
         ```
         valueParent[i][0]= INFINITE;
         valueParent[i][1]= -1;
         valueParent[i][2]= 0;
         ```
     - Process:
-        - determine minimum value (at first iteration this is starting node) and node index
+        - determine minimum value (at the first iteration this is starting node) and node index
+        - minValue has to be the biggest value. We use **INFINITE** for this (INFINITE: defined number at the beginning of the source code as 999.999)
+        ```
+        minValue = INFINITE;
+        for(i=0;i<count;i++){
+            if( valueParent[i][0] < minValue && valueParent[i][2] ==0){
+                index = i;
+                minValue = valueParent[i][0];
+            }
+        }
+        ```
+
+        - compare the every edge values (index: main_node_id , j: sub_node_id (edge) )
+        - **_costs_** : contains edge costs
+        - newCost = [ node value]  + [edge cost ]  (edge cost: cost between the connected 2 points / nodes)
+        - According to Dijkstra_algorithm, new total cost must be smaller than **old node value** ( valueParent[index][0] ) for the best path.
+        - if newCost statement is true, update the values
+        ```
+            //If node has a connection with other nodes cost has to be different from zero
+            if(costs[index][j] != 0){
+                
+                newCost = valueParent[index][0] + costs[index][j];
+
+                if( newCost < valueParent[j][0] ){
+                    printf("update value and parent\n");
+                    valueParent[j][0]= newCost;
+                    valueParent[j][1]= index; 
+                }
+            }
+        ```
+        - After scanning sub nodes, update current main node exploration status (as 1 = Explored)
+- **_findPath()_**
+    - this function works as a recursion function
+    - if nesx parent_id is -1 that means we find starting node and function stopped.
+    - Function print path from starting_node to ending_node
+
+
 
 ## Simple Example
 Below is an example of Dijkstra's algorithm.
-![image](https://i.hizliresim.com/6wcm9wr.png)
+![image](https://i.hizliresim.com/jffzyjd.png)
 
 ## Contributing
 If you find any issues with the code or have suggestions for improvement, feel free to open an issue or submit a pull request. Your contributions are welcome!
