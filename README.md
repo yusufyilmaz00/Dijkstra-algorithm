@@ -13,7 +13,7 @@ In this implementation, we have used a simple example problem of finding the sho
  - **getEdgeAndCost()**
     - use number instead of names for nodes
     - After entering of all nodes enter '0' to finish the loop
-    - Enter the connected node couples at once. This means input= {A, B, cost} and input= {B, A, cost} is same thing.
+    - Enter connected node pairs only once.. This means input= {A, B, cost} and input= {B, A, cost} is same thing.
     - ![node_numbers](https://i.hizliresim.com/bjo1374.png)
 - **findPath()**
     - initialize integer matrix called **_valueParent[][3]_**
@@ -69,8 +69,10 @@ In this implementation, we have used a simple example problem of finding the sho
 
 
 ## Simple Example
-Below is an example of Dijkstra's algorithm.
+Below is an example of Dijkstra's algorithm. Starting Node: A --> Finishing Node: B
+
 ![image](https://i.hizliresim.com/jffzyjd.png)
+![solution](https://i.hizliresim.com/t7dwdto.png)
 
 ## Contributing
 If you find any issues with the code or have suggestions for improvement, feel free to open an issue or submit a pull request. Your contributions are welcome!
