@@ -129,6 +129,18 @@ void findPath(char nodes[][LENGTH],int costs[][MAX],int count){
     printPath(nodes,valueParent,stop-1);
 }
 
+void printPath(char nodes[][LENGTH],int valueParent[][3],int startIndex){
+    int nextParent = valueParent[startIndex][1] ;
+
+    if( nextParent == -1 ){
+        printf("%s-",nodes[startIndex]);
+        return;
+    }
+    
+    printPath(nodes, valueParent, nextParent);
+    printf("%s-", nodes[startIndex]);
+}
+
 void showTable(char nodes[][LENGTH],int valueParent[][3],int count){
     int i;
     
@@ -143,16 +155,4 @@ void showTable(char nodes[][LENGTH],int valueParent[][3],int count){
             }
         }
     printf("~~~~~~~~~~~~~~~~~\n\n");    
-}
-
-void printPath(char nodes[][LENGTH],int valueParent[][3],int startIndex){
-    int nextParent = valueParent[startIndex][1] ;
-
-    if( nextParent == -1 ){
-        printf("%s-",nodes[startIndex]);
-        return;
-    }
-    
-    printPath(nodes, valueParent, nextParent);
-    printf("%s-", nodes[startIndex]);
 }
