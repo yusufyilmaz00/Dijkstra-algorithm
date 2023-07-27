@@ -61,15 +61,22 @@ In this implementation, we have used a simple example problem of finding the sho
             }
         ```
         - After scanning sub nodes, update current main node exploration status (as 1 = Explored)
-- **_findPath()_**
+- **_printPath()_**
     - this function works as a recursion function
     - if nesx parent_id is -1 that means we find starting node and function stopped.
     - Function print path from starting_node to ending_node
 
+- **_showTable()_**
+    - This functions is optinol because we use only print table and iterations.
+    - This functions make it easy for us to follow the process steps
+    - You can delete these functions or change them as you wish. 
 
+- **In Conculision**
+    - The important point is to understand and use the algorithm .
+    - Also an important part of my code, _**the process part of the findPath() function**_.
 
 ## Simple Example
-Below is an example of Dijkstra's algorithm. Starting Node: A --> Finishing Node: B
+Below is an example of Dijkstra's algorithm. Starting Node: A --> Finishing Node: C
 
 ![image](https://i.hizliresim.com/jffzyjd.png)
 ![solution](https://i.hizliresim.com/t7dwdto.png)

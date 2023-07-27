@@ -85,8 +85,7 @@ void findPath(char nodes[][LENGTH],int costs[][MAX],int count){
     valueParent[start-1][0]= 0;
     printf("\n");
 
-    // progress
-    
+    // process
     for(k=0;k<count;k++){
 
         // find min value and node index
