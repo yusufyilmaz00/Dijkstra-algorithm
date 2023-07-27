@@ -35,7 +35,7 @@ void getEdgeAndCost(char nodes[][LENGTH],int costs[][MAX],int count){
     for(i=0;i<count;i++){
         printf("\t%s [%d]\n",nodes[i],i+1);
     }
-    printf("\nenter the node couples one time like only (A,B) or only (B,A)\nEnter node '0' for exit\n\n");
+    printf("\nEnter connected node pairs only once. like only (A,B) or only (B,A)\nEnter '0' for exit\n\n");
 
     while(n1 != 0 || n2 != 0 ){
         printf("Enter a number of first node :");
