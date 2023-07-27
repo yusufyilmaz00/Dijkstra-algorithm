@@ -63,7 +63,7 @@ In this implementation, we have used a simple example problem of finding the sho
         - After scanning sub nodes, update current main node exploration status (as 1 = Explored)
 - **_printPath()_**
     - this function works as a recursion function
-    - if nesx parent_id is -1 that means we find starting node and function stopped.
+    - if next parent_id is -1 that means we find starting node and function stopped.
     - Function print path from starting_node to ending_node
 
 - **_showTable()_**
